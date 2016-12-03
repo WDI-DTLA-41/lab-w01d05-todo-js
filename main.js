@@ -1,7 +1,7 @@
 console.log("Linked")
 
 // Function to determine when user presses enter
-var handleEnter = function (event){
+var addTodoItem = function (event){
   if (event.keyCode === 13){
     //console.log(event);
     console.log(event.target.value);
@@ -23,9 +23,18 @@ var handleEnter = function (event){
     // Append our new li to the todo List
     todoList.appendChild(newLi);
 
+    // Add Event Listener to remove Item
+    newLi.addEventListener('click', removeTodoItem);
+
   };
 };
 
 //Add Event Listener to input element
 var inputArea = document.querySelector('input');
-inputArea.addEventListener('keypress', handleEnter);
+inputArea.addEventListener('keypress', addTodoItem);
+
+
+//Remove to do Item
+var removeTodoItem = function (){
+this.remove();
+};
