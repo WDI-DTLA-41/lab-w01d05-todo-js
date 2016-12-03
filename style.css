@@ -1,0 +1,16 @@
+body {
+  background: #ffe4bc;
+  font-family: sans-serif;
+}
+
+.new-todo {
+
+}
+
+.todos {
+  background="red";
+}
+
+li:hover {
+  cursor: pointer;
+}
