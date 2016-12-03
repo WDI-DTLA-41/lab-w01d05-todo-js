@@ -6,12 +6,12 @@ by creating a simple Todo App.
 Implement the following tasks: 
 
 # Setup
-- [ ] Fork and clone this repository
-- [ ] Create index.html, main.js and style.css files.
-- [ ] Add your HTML boilerplate and link up your files
-- [ ] Add an input element with the class "new-todo" to the page
-- [ ] Add an empty unordered list with the class 'todos'
-- [ ] Start up a server
+- [x] Fork and clone this repository
+- [x] Create index.html, main.js and style.css files.
+- [x] Add your HTML boilerplate and link up your files
+- [x] Add an input element with the class "new-todo" to the page
+- [x] Add an empty unordered list with the class 'todos'
+- [x] Start up a server
 
 ### When a user enters text into 'input.new-todo' and hits enter
 - [ ] render the text as a new 'li'
