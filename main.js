@@ -1,19 +1,12 @@
-console.log("hello");
-
-
-// ### When a user enters text into 'input.new-todo' and hits enter
-// - [ ] render the text as a new 'li'
-// - [ ] the 'li' should contain the value from 'input.new-todo'
-// - [ ] the 'li' should have a class of "todo"
-// - [ ] the 'li' should contain a 'span' with a class of 'remove' and the text content 'x'
-// - [ ] Append the 'li' to 'ul.todos'
-
 var toDoList = document.querySelector('.todos');
 var input = document.querySelector('.new-todo');
-var newItem = document.createElement('li');
+
+// Create to do items
 
 var createLi = function() {
-  return document.createElement('li');
+  var toDoItem = document.createElement('li');
+  toDoItem.addEventListener('click', completeTask);
+  return toDoItem;
 }
 
 var handleInput = function(event) {
@@ -24,7 +17,14 @@ var handleInput = function(event) {
     //reset input text box
     event.target.value = '';
   }
-  return;
 }
 
 input.addEventListener('keypress', handleInput);
+
+// var toDoItem = document.querySelector('li')
+
+var completeTask = function(event) {
+  event.target.classList.add('complete');
+}
+
+// toDoItem.addEventListener('click', completeTask);
