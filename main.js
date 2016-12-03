@@ -8,10 +8,20 @@ var handleEnter = function (event){
     console.log("User Pressed Enter");
     console.log('<li>' + event.target.value + '</li>');
 
-    var newLi = '<li class="todo"><span class="remove">x</span>' + event.target.value + '</li>';
-    // Get the unOrdered List
-    var uList = document.querySelector('ul')
-    uList.appendC
+    // Create new List Item
+    var newLi = document.createElement("li")
+
+    // Add class to new List Item
+    newLi.className='todo'
+
+    // Add span and User's text
+    newLi.innerHTML = '<span class="remove">x</span>' + ' ' + event.target.value;
+
+    // Get the ToDo List unOrdered List
+    var todoList = document.querySelector('ul')
+
+    // Append our new li to the todo List
+    todoList.appendChild(newLi);
 
   };
 };
