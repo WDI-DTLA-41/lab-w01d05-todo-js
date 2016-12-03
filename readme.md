@@ -6,18 +6,18 @@ by creating a simple Todo App.
 Implement the following tasks: 
 
 # Setup
-- [ ] Fork and clone this repository
-- [ ] Create index.html, main.js and style.css files.
-- [ ] Add your HTML boilerplate and link up your files
-- [ ] Add an input element with the class "new-todo" to the page
-- [ ] Add an empty unordered list with the class 'todos'
-- [ ] Start up a server
+- [X] Fork and clone this repository
+- [X] Create index.html, main.js and style.css files.
+- [X] Add your HTML boilerplate and link up your files
+- [X] Add an input element with the class "new-todo" to the page
+- [X] Add an empty unordered list with the class 'todos'
+- [X] Start up a server
 
 ### When a user enters text into 'input.new-todo' and hits enter
-- [ ] render the text as a new 'li'
-- [ ] the 'li' should contain the value from 'input.new-todo'
-- [ ] the 'li' should have a class of "todo"
-- [ ] the 'li' should contain a 'span' with a class of 'remove' and the text content 'x'
+- [X] render the text as a new 'li'
+- [X] the 'li' should contain the value from 'input.new-todo'
+- [X] the 'li' should have a class of "todo"
+- [X] the 'li' should contain a 'span' with a class of 'remove' and the text content 'x'
 - [ ] Appdn the 'li' to 'ul.todos'
 
 ### When a user clicks on a todo's span's "x"
