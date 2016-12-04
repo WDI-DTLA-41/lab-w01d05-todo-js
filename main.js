@@ -2,7 +2,6 @@ var toDoList = document.querySelector('.todos');
 var input = document.querySelector('.new-todo');
 
 var handleInput = function(event) {
-
   if (event.keyCode === 13 && input.value !== "") {
     var toDoItem = document.createElement('li');
     toDoItem.addEventListener('click', completeTask);
@@ -10,7 +9,6 @@ var handleInput = function(event) {
     toDoList.appendChild(toDoItem).innerHTML = event.target.value + '<span>x</span>';
     event.target.value = '';
   }
-  return toDoItem;
 }
 
 input.addEventListener('keypress', handleInput);

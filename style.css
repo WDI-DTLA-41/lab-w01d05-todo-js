@@ -1,6 +1,7 @@
 body {
-  background: #ffe4bc;
+  background: #fffbb2;
   font-family: sans-serif;
+  color: #4c4c4c;
 }
 
 input {
@@ -11,6 +12,7 @@ input {
   margin: 0 auto;
   margin-top: 75px;
   text-align: center;
+  color: #4c4c4c;
 }
 
 .todos {
@@ -25,14 +27,16 @@ li {
   /*margin-bottom: 20px;*/
   padding: 15px;
   margin-bottom: -2px;
-  border: 2px solid black;
+  border: 2px solid;
+  border-color:#7c8395;
   word-wrap: break-word;
   background-color: #f7f7f7;
 }
 
 li:hover {
   cursor: pointer;
-  color: red;
+  color: #ef4040;
+  background-color: #d1e2fc;
 }
 
 .complete {
@@ -40,16 +44,18 @@ li:hover {
 }
 
 span {
-  color:red;
+  color:#ef4040;
   float: right;
-  border: 2px solid black;
-  background-color: #e0e0e0;
+  border-radius: 15%;
   padding: 0 5px 0 5px;
 }
 
 span:hover {
-  background-color: red;
+  background-color: #ef4040;
   color: white;
+  border: 2px solid;
+  border-color: #282e34;
+  border-radius: 15%;
 }
 
 
