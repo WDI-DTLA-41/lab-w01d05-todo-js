@@ -23,9 +23,15 @@ var addTodoItem = function (event){
     // Append our new li to the todo List
     todoList.appendChild(newLi);
 
-    // Add Event Listener to remove Item
-    newLi.addEventListener('click', removeTodoItem);
+    // Add Event Listener to remove Item // when text is clicked remove item
+    // newLi.addEventListener('click', removeTodoItem);
+    var todoItems = document.querySelectorAll('.remove');
+    for (var i = 0; i < todoItems.length; i++){
+      todoItems[i].addEventListener('click',removeTodoItem);
+    };
+    /// EXPERIMENTAL // will need to comment out line 27 to test
 
+    /// END Experimental ///
   };
 };
 
@@ -36,5 +42,16 @@ inputArea.addEventListener('keypress', addTodoItem);
 
 //Remove to do Item
 var removeTodoItem = function (){
-this.remove();
+  console.log('clicked. will remove')
+  this.parentNode.remove();
 };
+
+/// EXPERIMENTAL - this works.
+// var firstOne = document.querySelector('.remove');
+// firstOne.parentNode;
+// firstOne.parentNode.remove();
+/// END OF EXPERIMENTAL
+
+
+
+
