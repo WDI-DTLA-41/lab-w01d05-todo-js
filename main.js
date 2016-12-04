@@ -35,21 +35,22 @@ var createTodo = function(event) {
 // - [ ] add or remove the class "complete"
 // - [ ] "complete" should add a line through the text
 
-var clickOn = function(event) {
+var clickOn = function() {
   var listItem = event.target;
   listItem.className = 'complete';
-  var completeClass = document.querySelectorAll('complete')
-  completeClass.style.textDecoration = 'line-through';
+  listItem.style.textDecoration = 'line-through';
 }
 
-var clickOff = function(event) {
+var clickOff = function() {
   var listItem = event.target;
-  newListItem.className = 'todo';
+  listItem.className = 'todo';
+  listItem.style.textDecoration = 'none';
 }
 
 
-var checkList = function(event) {
-
+var checkList = function() {
+  console.log(event.target);
+  var listItem = event.target;
   if (event.target.className === 'todo'){
     clickOn();
   } else if (event.target.className === 'complete'){
@@ -57,6 +58,6 @@ var checkList = function(event) {
   }
 }
 
-var newListItem = document.createElement('li');
+var listClick = document.querySelector('ul');
 input.addEventListener('keyup', createTodo);
-newListItem.addEventListener('click', checkList);
+listClick.addEventListener('click', checkList);
