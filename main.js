@@ -18,7 +18,7 @@ var addTask = function (event){
     newLi.innerHTML = '<span class="remove">x</span>' + ' ' + event.target.value;
 
     // Get the ToDo List unOrdered List
-    var todoList = document.querySelector('ul')
+    var todoList = document.querySelector('ul');
 
     // Append our new li to the todo List
     todoList.appendChild(newLi);
@@ -59,7 +59,11 @@ var markTaskCompletionState = function (){
         console.log('it is completed. removing complete');
         this.classList.remove('complete')
       }
-  else {this.classList.add('complete')};
+  else {
+    this.classList.add('complete');
+    var todoList = document.querySelector('ul');
+    todoList.appendChild(this)
+  };
 };
 
 
