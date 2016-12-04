@@ -25,11 +25,19 @@ var addTodoItem = function (event){
 
     // Add Event Listener to remove Item // when text is clicked remove item
     // newLi.addEventListener('click', removeTodoItem);
+
+    // Collect all span items in the todo list
     var todoItems = document.querySelectorAll('.remove');
+
+    // iterate through array of todo items and add an event
     for (var i = 0; i < todoItems.length; i++){
       todoItems[i].addEventListener('click',removeTodoItem);
     };
-    /// EXPERIMENTAL // will need to comment out line 27 to test
+    /// EXPERIMENTAL // for completed tasks
+    var completedTasks = document.querySelectorAll('.todo');
+    for (var i = 0; i < completedTasks.length; i++){
+      completedTasks[i].addEventListener('click',markAsCompleted);
+    };
 
     /// END Experimental ///
   };
@@ -45,6 +53,13 @@ var removeTodoItem = function (){
   console.log('clicked. will remove')
   this.parentNode.remove();
 };
+
+// Set task to completed
+var markAsCompleted = function (){
+  console.log('set to complete');
+  this.className = "complete";
+};
+
 
 /// EXPERIMENTAL - this works.
 // var firstOne = document.querySelector('.remove');

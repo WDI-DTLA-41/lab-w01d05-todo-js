@@ -18,10 +18,10 @@ Implement the following tasks:
 - [X] the 'li' should contain the value from 'input.new-todo'
 - [X] the 'li' should have a class of "todo"
 - [X] the 'li' should contain a 'span' with a class of 'remove' and the text content 'x'
-- [ ] Appdn the 'li' to 'ul.todos'
+- [X] Appdn the 'li' to 'ul.todos'
 
 ### When a user clicks on a todo's span's "x"
-- [ ] remove the todo from the DOM
+- [X] remove the todo from the DOM
 
 ### When a user click's on the todo text
 - [ ] add or remove the class "complete"
