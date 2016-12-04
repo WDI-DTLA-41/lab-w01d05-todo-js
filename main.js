@@ -17,6 +17,9 @@ var addTask = function (event){
     // Add span and User's text
     newLi.innerHTML = '<span class="remove">x</span>' + ' ' + event.target.value;
 
+    // Clear our input box
+    event.target.value = '';
+
     // Get the ToDo List unOrdered List
     var todoList = document.querySelector('ul');
 
@@ -61,8 +64,8 @@ var markTaskCompletionState = function (){
       }
   else {
     this.classList.add('complete');
-    var todoList = document.querySelector('ul');
-    todoList.appendChild(this)
+    // var todoList = document.querySelector('ul');
+    // todoList.appendChild(this)
   };
 };
 
