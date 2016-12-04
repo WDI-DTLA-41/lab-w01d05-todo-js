@@ -14,7 +14,11 @@ var handleInput = function(event) {
 input.addEventListener('keypress', handleInput);
 
 var completeTask = function(event) {
+  if (event.target.classList.contains('complete')) {
+    event.target.classList.remove('complete');
+  } else {
   event.target.classList.add('complete');
+  }
 }
 
 // Remove item when clicking x - only if target (span) is not equal
