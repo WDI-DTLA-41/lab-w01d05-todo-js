@@ -1,30 +1,30 @@
 var toDoList = document.querySelector('.todos');
 var input = document.querySelector('.new-todo');
 
-// Create to do items
+var handleInput = function(event) {
 
-var createLi = function() {
-  var toDoItem = document.createElement('li');
-  toDoItem.addEventListener('click', completeTask);
+  if (event.keyCode === 13 && input.value !== "") {
+    var toDoItem = document.createElement('li');
+    toDoItem.addEventListener('click', completeTask);
+    toDoItem.addEventListener('click', removeItem);
+    toDoList.appendChild(toDoItem).innerHTML = event.target.value + '<span>x</span>';
+    event.target.value = '';
+  }
   return toDoItem;
 }
 
-var handleInput = function(event) {
-
-  if (event.keyCode === 13) {
-    toDoList.appendChild(createLi()).textContent = event.target.value;
-
-    //reset input text box
-    event.target.value = '';
-  }
-}
-
 input.addEventListener('keypress', handleInput);
-
-// var toDoItem = document.querySelector('li')
 
 var completeTask = function(event) {
   event.target.classList.add('complete');
 }
 
-// toDoItem.addEventListener('click', completeTask);
+// Remove item when clicking x - only if target (span) is not equal
+// to currentTarget (li).  This way remove only occurs when clicking
+// child of li (span) and not when clicking li
+var removeItem = function(event) {
+  if (event.target !== event.currentTarget) {
+    event.target.parentNode.remove();
+  }
+}
+

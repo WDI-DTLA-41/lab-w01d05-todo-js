@@ -3,18 +3,53 @@ body {
   font-family: sans-serif;
 }
 
-.new-todo {
-
+input {
+  height:50px;
+  width: 250px;
+  display:block;
+  font-size:30px;
+  margin: 0 auto;
+  margin-top: 75px;
+  text-align: center;
 }
 
 .todos {
-  background="red";
+  margin: 0 auto;
+  margin-top: 75px;
+  font-size: 25px;
+  width: 450px;
+  list-style:none;
+}
+
+li {
+  /*margin-bottom: 20px;*/
+  padding: 15px;
+  margin-bottom: -2px;
+  border: 2px solid black;
+  word-wrap: break-word;
+  background-color: #f7f7f7;
 }
 
 li:hover {
   cursor: pointer;
+  color: red;
 }
 
 .complete {
   text-decoration: line-through;
 }
+
+span {
+  color:red;
+  float: right;
+  border: 2px solid black;
+  background-color: #e0e0e0;
+  padding: 0 5px 0 5px;
+}
+
+span:hover {
+  background-color: red;
+  color: white;
+}
+
+
