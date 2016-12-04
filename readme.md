@@ -14,9 +14,9 @@ Implement the following tasks:
 - [x] Start up a server
 
 ### When a user enters text into 'input.new-todo' and hits enter
-- [ ] render the text as a new 'li'
-- [ ] the 'li' should contain the value from 'input.new-todo'
-- [ ] the 'li' should have a class of "todo"
+- [x] render the text as a new 'li'
+- [x] the 'li' should contain the value from 'input.new-todo'
+- [x] the 'li' should have a class of "todo"
 - [ ] the 'li' should contain a 'span' with a class of 'remove' and the text content 'x'
 - [ ] Appdn the 'li' to 'ul.todos'
 
