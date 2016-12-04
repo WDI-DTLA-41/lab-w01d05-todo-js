@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-  <link rel="stylesheet" href="style.css">
-  <title>Daily Task Tracker</title>
-</head>
-<body>
-<h1>Daily Task Tracker</h1>
-  <input class="new-todo" type="text" placeholder="Enter a task:">
-  <div id="notCompletedTaskList">
-  <ul class="todos"><h2>Complete for the Day</h2></ul>
-  </div>
+  <head>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+    <link rel="stylesheet" href="style.css">
+    <title>Daily Task Tracker</title>
 
-<script src="main.js"></script>
-</body>
+    <!--Optimize for mobile viewing-->
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  </head>
+  <body>
+    <h1>Daily Task Tracker</h1>
+    <input class="new-todo" type="text" placeholder="Enter a task:">
+    <div id="notCompletedTaskList">
+      <ul class="todos"><h2>Complete for the Day</h2></ul>
+    </div>
+
+    <!--Main page logic-->
+    <script src="main.js"></script>
+    <!--jQuery is required by Materialize to function-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+  </body>
 </html>
