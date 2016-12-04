@@ -1,7 +1,7 @@
 console.log("Linked")
 
 // Function to determine when user presses enter
-var addTodoItem = function (event){
+var addTask = function (event){
   if (event.keyCode === 13){
     //console.log(event);
     console.log(event.target.value);
@@ -24,40 +24,45 @@ var addTodoItem = function (event){
     todoList.appendChild(newLi);
 
     // Add Event Listener to remove Item // when text is clicked remove item
-    // newLi.addEventListener('click', removeTodoItem);
+    // newLi.addEventListener('click', deleteTask);
 
     // Collect all span items in the todo list
     var todoItems = document.querySelectorAll('.remove');
 
     // iterate through array of todo items and add an event
     for (var i = 0; i < todoItems.length; i++){
-      todoItems[i].addEventListener('click',removeTodoItem);
+      todoItems[i].addEventListener('click',deleteTask);
+    };
+
+    var tasks = document.querySelectorAll('.todo');
+    for (var i = 0; i < tasks.length; i++){
+      tasks[i].addEventListener('click',markTaskCompletionState);
     };
     /// EXPERIMENTAL // for completed tasks
-    var completedTasks = document.querySelectorAll('.todo');
-    for (var i = 0; i < completedTasks.length; i++){
-      completedTasks[i].addEventListener('click',markAsCompleted);
-    };
 
     /// END Experimental ///
   };
 };
 
-//Add Event Listener to input element
+//Get input element and add Event Listener
 var inputArea = document.querySelector('input');
-inputArea.addEventListener('keypress', addTodoItem);
+inputArea.addEventListener('keypress', addTask);
 
 
-//Remove to do Item
-var removeTodoItem = function (){
+//Remove Task
+var deleteTask = function (){
   console.log('clicked. will remove')
   this.parentNode.remove();
 };
 
-// Set task to completed
-var markAsCompleted = function (){
+// Mark task as completed or not complete
+var markTaskCompletionState = function (){
   console.log('set to complete');
-  this.className = "complete";
+  if(this.classList.contains('complete')){
+        console.log('it is completed. removing complete');
+        this.classList.remove('complete')
+      }
+  else {this.classList.add('complete')};
 };
 
 

@@ -24,8 +24,8 @@ Implement the following tasks:
 - [X] remove the todo from the DOM
 
 ### When a user click's on the todo text
-- [ ] add or remove the class "complete"
-- [ ] "complete" should add a line through the text
+- [X] add or remove the class "complete"
+- [X] "complete" should add a line through the text
 
 # Bonus 
 
