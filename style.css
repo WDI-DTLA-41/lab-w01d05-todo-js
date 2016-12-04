@@ -9,3 +9,24 @@ body {
 .notComplete {
   text-decoration: none;
 }
+
+#completedTaskList {
+  float: right;
+  margin-top: 100px;
+  border: 2px solid red;
+  border-radius: 25px;
+  display: inline-block;
+  width: 260px;
+}
+
+#notCompletedTaskList {
+  float: left;
+  margin-top: 100px;
+  border: 2px solid black;
+  border-radius: 25px;
+  width: 260px;
+}
+
+.important {
+  background-color: yellow;
+}

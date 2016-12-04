@@ -37,16 +37,13 @@ var addTask = function (event){
     var tasks = document.querySelectorAll('.todo');
     for (var i = 0; i < tasks.length; i++){
       tasks[i].addEventListener('click',markTaskCompletionState);
+      tasks[i].addEventListener('dblclick',markTaskImportant);
     };
-    /// EXPERIMENTAL // for completed tasks
+    /// EXPERIMENTAL // for important tasks
 
     /// END Experimental ///
   };
 };
-
-//Get input element and add Event Listener
-var inputArea = document.querySelector('input');
-inputArea.addEventListener('keypress', addTask);
 
 
 //Remove Task
@@ -67,11 +64,23 @@ var markTaskCompletionState = function (){
 
 
 /// EXPERIMENTAL - this works.
+// function to highlight important tasks
+var markTaskImportant = function (){
+  console.log("Mark as Important");
+  if(this.classList.contains('important')){
+    console.log('already marked as important');
+    this.classList.remove('important');
+  }
+  else {this.classList.add('important')};
+};
+
 // var firstOne = document.querySelector('.remove');
 // firstOne.parentNode;
 // firstOne.parentNode.remove();
 /// END OF EXPERIMENTAL
 
-
+//Get input element and add Event Listener
+var inputArea = document.querySelector('input');
+inputArea.addEventListener('keypress', addTask);
 
 
