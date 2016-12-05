@@ -59,3 +59,7 @@ h5 {
 input {
   margin: 15px 15px;
 }
+
+.remove:hover {
+  color: red;
+}
