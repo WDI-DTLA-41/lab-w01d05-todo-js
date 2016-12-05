@@ -1,3 +1,50 @@
+
+
+body {
+  background:  #EEE0FF;
+  font-family: 'Roboto Mono', monospace;
+}
+
+h1 {
+  color: white;
+  font-size: 200px;
+  text-align: center;
+  letter-spacing: 15px;
+  text-decoration: line-through;
+  margin: 30px;
+
+}
+
+input {
+  width: 300px;
+  height: 300px;
+  margin: 100px;
+  float: right;
+  transform: rotate(30deg);
+  font-size: 30px;
+  letter-spacing: 6px;
+  border: none;
+  font-family: 'Roboto Mono', monospace;
+}
+
+
+ul {
+  margin: 50px;
+  font-size: 30px;
+  letter-spacing: 6px;
+  color: white;
+
+}
+
+li {
+  list-style-type: square;
+}
+
+
+
+
+/*STYLE 1
+
 body {
   background:  #BB84BB;
   font-family: 'Space Mono', monospace;
@@ -5,9 +52,6 @@ body {
 
 h1 {
   color: white;
-/*  text-align: center;*/
-/*  font-size: 250px;*/
-/*  margin: 20px;*/
   font-size: 250px;
 }
 
@@ -35,3 +79,4 @@ li {
   list-style-type: square;
 }
 
+*/
