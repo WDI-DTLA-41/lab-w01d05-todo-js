@@ -1,7 +1,17 @@
 ul {
   list-style: none;
+  margin: 20px 0 0 -50px;
+  text-align: center;
 }
 
 .complete {
   text-decoration: line-through;
 }
+body {
+  margin: 20px;
+  text-align: center;
+  font-family: monospace;
+}
+/*h1 {
+  font-family: monospace;
+}*/
