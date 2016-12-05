@@ -6,6 +6,7 @@ body {
   background-position: center;
   text-align: center;
   color: white;
+
 }
 
 .complete {
@@ -53,9 +54,6 @@ h5 {
   margin: 15px 15px;
   text-decoration: underline;
   /*border: 2px solid black;*/
-}
-
-#taskLists {
 }
 
 input {
