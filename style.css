@@ -20,7 +20,7 @@ input {
   margin-top: 75px;
   font-size: 25px;
   width: 450px;
-  list-style:none;
+  /*list-style:none;*/
 }
 
 li {
@@ -29,6 +29,7 @@ li {
   margin-bottom: -2px;
   border: 2px solid;
   border-color:#7c8395;
+  list-style-position:inside;
   word-wrap: break-word;
   background-color: #f7f7f7;
 }
@@ -47,7 +48,7 @@ li:active {
   text-decoration: line-through;
 }
 
-span {
+#x {
   color:#ef4040;
   float: right;
   padding: 0 5px 0 5px;
@@ -55,14 +56,14 @@ span {
   border-radius: 15%;
 }
 
-span:hover {
+#x:hover {
   background-color: #ef4040;
   color: white;
   /*border-color: #282e34;*/
   border-radius: 15%;
 }
 
-span:active {
+#x:active {
   background-color: #ef4040;
   color: white;
   /*border-color: #282e34;*/
