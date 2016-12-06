@@ -4,46 +4,38 @@ console.log("Linked")
 var addTask = function (event){
   if (event.keyCode === 13){
     if (event.target.value !== ""){
-      // console.log(event);
-      // console.log(event.target.value);
-      console.log("User Pressed Enter");
-      // console.log('<li>' + event.target.value + '</li>');
+
       // Create new List Item
       var newLi = document.createElement("li")
-
       // Add class to new List Item
       newLi.className='todo'
-
       // Add span and User's text
       newLi.innerHTML = '<span class="remove">x</span>' + ' ' + event.target.value;
-
-      // Clear our input box
+      // Clear out input box
       event.target.value = '';
-
       // Get the ToDo List unOrdered List
       var todoList = document.querySelector('ul');
-
       // Append our new li to the todo List
       todoList.appendChild(newLi);
 
-      // Add Event Listener to remove Item // when text is clicked remove item
-      // newLi.addEventListener('click', deleteTask);
 
       // Collect all span items in the todo list
       var todoItems = document.querySelectorAll('.remove');
-
-      // iterate through array of todo items and add an event
+      // iterate through array of todo items and add the deleteTask event listener
       for (var i = 0; i < todoItems.length; i++){
         todoItems[i].addEventListener('click',deleteTask);
       };
 
+      // Collect all to do items and add event listeners for marking completion state and importance
       var tasks = document.querySelectorAll('.todo');
       for (var i = 0; i < tasks.length; i++){
         tasks[i].addEventListener('click',markTaskCompletionState);
         tasks[i].addEventListener('dblclick',markTaskImportant);
       };
     /// EXPERIMENTAL // for important tasks
-    // Game Score Keeping
+    //gets the count of todo items
+document.getElementById('total-tasks').innerHTML= document.getElementById('taskList').getElementsByClassName('todo').length;
+
     /// END Experimental ///
     }
     else{alert("Enter Todo")}
@@ -53,33 +45,38 @@ var addTask = function (event){
 
 //Remove Task
 var deleteTask = function (){
-  console.log('clicked. will remove')
+  console.log('clicked. will remove');
   this.parentNode.remove();
+  document.getElementById('total-tasks').innerHTML= document.getElementById('taskList').getElementsByClassName('todo').length
 };
+
 
 // Completed Task Tracking
 completedTaskCount = 0;
-var completedTaskElement = document.createElement('div');
-completedTaskElement.innerHTML = completedTaskCount;
-completedTaskElement.setAttribute('Id', 'currentCompletedTaskCount');
-var tasksCompleted = document.getElementById('tasks-completed');
-tasksCompleted.appendChild(completedTaskElement);
+document.getElementById('tasks-completed').innerHTML= completedTaskCount;
 
 // Add Completed Task to Tally Function
-var addScore = function (tally) {
-  var cCompletedTaskCount = document.getElementById('currentCompletedTaskCount');
+var addCTask = function (tally) {
   completedTaskCount += tally;
-  cCompletedTaskCount.innerHTML = completedTaskCount;
+  document.getElementById('tasks-completed').innerHTML = completedTaskCount;
 
 };
 
 // Remove Completed Task to Tally Function
-var removeScore = function (tally) {
-  var cCompletedTaskCount = document.getElementById('currentCompletedTaskCount');
+var removeCTask = function (tally) {
   completedTaskCount -= tally;
-  cCompletedTaskCount.innerHTML = completedTaskCount;
+  document.getElementById('tasks-completed').innerHTML = completedTaskCount;
 
 };
+
+
+// Total Task Count
+totalTaskCount = 0;
+//document.getElementById('total-tasks').innerHTML=1234567890;
+
+//gets the count of todo items
+document.getElementById('total-tasks').innerHTML= document.getElementById('taskList').getElementsByClassName('todo').length
+
 
 // Mark task as completed or not complete
 var markTaskCompletionState = function (){
@@ -87,15 +84,17 @@ var markTaskCompletionState = function (){
   if(this.classList.contains('complete')){
         console.log('it is completed. removing complete');
         this.classList.remove('complete');
-        removeScore(1);
+        removeCTask(1);
   } else {
     this.classList.add('complete');
-    addScore(1);
+    addCTask(1);
     // this.classList.toggle('complete');
     // var todoList = document.querySelector('ul');
     // todoList.appendChild(this)
   };
 };
+
+
 
 // function to highlight important tasks
 var markTaskImportant = function (){
@@ -110,12 +109,7 @@ var markTaskImportant = function (){
 
 
 /// EXPERIMENTAL
-// Tally of how many tasks there are and how many are completed
-//var taskCount = function (){}
 
-// var firstOne = document.querySelector('.remove');
-// firstOne.parentNode;
-// firstOne.parentNode.remove();
 /// END OF EXPERIMENTAL
 
 //Get input element and add Event Listener

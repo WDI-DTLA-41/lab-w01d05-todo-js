@@ -12,10 +12,10 @@
   <body>
     <h2>Daily Task Tracker</h2>
     <input class="new-todo" type="text" placeholder="Enter a task:">
-    <div>You have completed: <span id="tasks-completed"></span></div>
-    <div id="taskLists">
-      <ul class="todos z-depth-3"><h5>Tasks for the Day:</h5></ul>
-    </div>
+    <div>You have completed: <span id="tasks-completed"></span> out of: <span id="total-tasks">5</span> tasks</div>
+    <!-- <div id="taskLists"></div> -->
+      <ul id="taskList" class="todos z-depth-3"><h5>Tasks for the Day:</h5></ul>
+
     <!--Main page logic-->
     <script src="main.js"></script>
     <!--jQuery is required by Materialize to function-->
