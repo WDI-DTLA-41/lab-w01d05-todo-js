@@ -45,6 +45,10 @@ span {
   padding: 6px;
 }
 
+.complete {
+  text-decoration: line-through;
+}
+
 
 
 

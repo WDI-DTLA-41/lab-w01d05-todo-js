@@ -16,27 +16,41 @@ var handleEnter = function(event) {
     event.currentTarget.value = " ";
 
 
-    // event listener for click on x
-    newElement.addEventListener('click', removeItem);
 
+    // click - event listener
+    newElement.addEventListener('click', removeItem);
+    // strikethrough - event listener
+    newElement.addEventListener('click', addClass);
+
+
+    // counter
+var li = document.getElementsByTagName("li")
+console.log(li.length)
+var counter = li.length
   }
 }
 
 input.addEventListener('keyup', handleEnter)
 
 
-
-
 // remove element when you press x
-// find span
-// click on span
-// remove li
-
-
-// attempt 1 ////////////////////////////////
 var removeItem = function(event){
   if(event.target.classList.contains("remove")){
   // use event.target if clicking
   event.target.parentNode.remove();
   }
 }
+
+
+// remove element when you press x
+var addClass = function(event){
+  this.classList.toggle('complete');
+}
+
+
+// counter
+// var li = document.querySelector("li")
+//  console.log(li.length)
+// var counter = li.length
+
+
