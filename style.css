@@ -1,8 +1,38 @@
 body {
   background: lavender;
+  text-align: center;
+  font-family: 'Aref Ruqaa', serif;
 }
 
-/*.complete {
-  text-decoration: line-through;
+.remove {
+  font-family: sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none !important;
 }
-*/
+
+.todos {
+  font-family: sans-serif;
+  list-style: none;
+  position: relative;
+  left: 37%;
+  text-align: left;
+
+}
+
+h1 {
+  text-decoration: underline;
+}
+
+li {
+  cursor: pointer;
+}
+
+@media (max-width: 500px) {
+  .todos {
+    text-align: left;
+    position: relative;
+    left: 25%;
+    width: 150px;
+  }
+}
