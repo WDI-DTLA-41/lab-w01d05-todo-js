@@ -1,0 +1,101 @@
+body {
+  background: #fffbb2;
+  font-family: sans-serif;
+  color: #4c4c4c;
+}
+
+p {
+  margin-top: 35px;
+  text-align: center;
+  font-size: 1.2em;
+  padding: 27px;
+}
+
+input {
+  height:50px;
+  width: 250px;
+  display:block;
+  font-size:30px;
+  margin: 0 auto;
+  margin-top: 75px;
+  margin-bottom: 25px;
+  text-align: center;
+  color: #4c4c4c;
+}
+
+.todos {
+  margin: 0 auto;
+  font-size: 25px;
+  width: 450px;
+}
+
+li {
+  padding: 15px;
+  margin-bottom: -2px;
+  border: 2px solid;
+  border-color:#7c8395;
+  list-style-position:inside;
+  word-wrap: break-word;
+  background-color: #f7f7f7;
+}
+
+li:hover {
+  cursor: pointer;
+  color: #ef4040;
+  background-color: #d1e2fc;
+}
+
+li:active {
+  background-color: #e5e5e5;
+}
+
+.complete {
+  text-decoration: line-through;
+}
+
+#x {
+  color:#ef4040;
+  float: right;
+  padding: 0 5px 0 5px;
+  border: 2px outset;
+  border-radius: 15%;
+}
+
+#x:hover {
+  background-color: #ef4040;
+  color: white;
+  border-radius: 15%;
+}
+
+#x:active {
+  background-color: #ef4040;
+  color: white;
+  border: 2px inset;
+  border-radius: 15%;
+}
+
+span {
+  padding-left: 3px;
+  padding-right: 3px;
+  color: #ef4040;
+}
+
+#completed-number {
+  border-left: 3px solid;
+  border-top: 3px solid;
+  border-bottom: 3px solid;
+  border-color: #4272bf;
+}
+
+#total-number {
+  border-right: 3px solid;
+  border-top: 3px solid;
+  border-bottom: 3px solid;
+  border-color: #4272bf;
+}
+
+.green {
+  color: green;
+}
+
+

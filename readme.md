@@ -18,7 +18,7 @@ Implement the following tasks:
 - [ ] the 'li' should contain the value from 'input.new-todo'
 - [ ] the 'li' should have a class of "todo"
 - [ ] the 'li' should contain a 'span' with a class of 'remove' and the text content 'x'
-- [ ] Appdn the 'li' to 'ul.todos'
+- [ ] Append the 'li' to 'ul.todos'
 
 ### When a user click's on the todo text
 - [ ] add or remove the class "complete"
