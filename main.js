@@ -10,6 +10,10 @@ var addItem = function(event) {
     newLI.innerHTML = '<span class="remove">x</span>' + ' ~ ' + event.target.value;
     event.target.value = '';
   };
+
+
+
+
 };
 input.addEventListener('keyup', addItem);
 
@@ -31,4 +35,16 @@ ul.addEventListener('click', function(event) {
 });
 
 
-////////// .classList.contains
+
+  // show number of todos completed out
+  // of number of todos left to complete
+var counter = function(){
+    var tasks = document.querySelectorAll('li').length;
+    var completed = document.querySelectorAll('.complete').length;
+    document.querySelector('h2').textContent = "you've completed " + completed + '/' + tasks + ' task(s)!';
+  };
+
+  document.body.addEventListener('keyup', counter);
+  document.body.addEventListener('click', counter);
+  // var tasks = document.body.querySelector('li');
+  // var completed = document.body.querySelector('.complete')
