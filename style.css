@@ -19,3 +19,9 @@ h1 {
 h2 {
   font-size: 30px;
 }
+span:hover {
+  color: red;
+}
+li:hover {
+  text-decoration: line-through;
+}
