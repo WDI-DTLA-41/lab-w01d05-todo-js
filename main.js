@@ -1,4 +1,4 @@
-console.log("Linked")
+console.log("Linked up")
 
 // Function to determine when user presses enter
 var addTask = function (event){
