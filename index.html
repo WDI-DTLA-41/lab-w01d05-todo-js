@@ -2,7 +2,7 @@
 <html>
   <head>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-    <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen"/>
     <link rel="stylesheet" href="style.css">
     <!--Optimize for mobile viewing-->
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1"/>
@@ -12,9 +12,11 @@
   <body>
     <h2>Daily Task Tracker</h2>
     <input class="new-todo" type="text" placeholder="Enter a task:">
-    <div>You have completed: <span id="tasks-completed"></span> out of: <span id="total-tasks">5</span> tasks</div>
+    <div>
+      <h5>Tasks for the Day:</h5>
+      You have completed: <span id="tasks-completed"></span> out of: <span id="total-tasks">5</span> tasks</div>
     <!-- <div id="taskLists"></div> -->
-      <ul id="taskList" class="todos z-depth-3"><h5>Tasks for the Day:</h5></ul>
+      <ul id="taskList" class="todos z-depth-3"></ul>
 
     <!--Main page logic-->
     <script src="main.js"></script>
