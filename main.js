@@ -11,7 +11,6 @@
 
 var input = document.querySelector('.new-todo');
 var listItems = document.querySelector('ul');
-var todoList = document.querySelector('.todos');
 var createTodo = function(event) {
   var newTodo = event.target.value;
   var newListItem = document.createElement('li');
@@ -60,7 +59,6 @@ var clickOff = function() {
 
 var checkList = function() {
   console.log(event.target);
-  var listItem = event.target;
   if (event.target.className === 'todo'){
     clickOn();
   } else if (event.target.className === 'complete'){
